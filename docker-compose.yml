@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - PORT=8000
+      - HOST=0.0.0.0
+      - RELOAD=true
+      - LOG_LEVEL=info
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
