@@ -1,0 +1,216 @@
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --dental-blue: #2c5aa0;
+    --dental-light: #e8f4fd;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.hero-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--dental-blue) 0%, var(--primary-color) 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .card {
+    background: white;
+    color: var(--dark-color);
+    border: none;
+    border-radius: 15px;
+}
+
+.feature-icon i {
+    opacity: 0.8;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.alert {
+    border: none;
+    border-radius: 8px;
+}
+
+.table {
+    background: white;
+}
+
+.table thead th {
+    background-color: var(--dental-light);
+    color: var(--dental-blue);
+    border: none;
+    font-weight: 600;
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+.appointment-card {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.appointment-card:hover {
+    transform: translateY(-5px);
+}
+
+.file-upload-area {
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.file-upload-area:hover {
+    border-color: var(--primary-color);
+    background-color: var(--dental-light);
+}
+
+.file-upload-area.dragover {
+    border-color: var(--success-color);
+    background-color: rgba(25, 135, 84, 0.1);
+}
+
+.profile-section {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.stats-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--dental-blue));
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stats-card h3 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.radiograph-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.radiograph-item {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.radiograph-item:hover {
+    transform: scale(1.05);
+}
+
+.radiograph-thumbnail {
+    width: 100%;
+    height: 150px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+    
+    .feature-icon i {
+        font-size: 2rem !important;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}

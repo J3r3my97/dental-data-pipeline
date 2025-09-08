@@ -1,0 +1,6 @@
+
+/app/__pycache__
+.claude/settings.local.json
+/.claude
+/app/routers/__pycache__
+CLAUDE.md
